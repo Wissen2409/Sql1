@@ -1,0 +1,45 @@
+-- ilk kodumuzu yazalim.
+
+-- ilk database olusturuldu
+
+create database FirstDatabase
+
+-- kullanilacak database secildi
+
+use FirstDatabase
+ 
+create table Personel(
+
+	Id int,
+
+	Ad nvarchar(20),
+
+	Soyad nvarchar(20),
+
+	TC nvarchar(11),
+
+	Eposta nvarchar(30)
+
+)
+ 
+-- olusturdugumuz tabloya veri girme islemi
+
+insert into Personel(Id,Ad,Soyad,TC,Eposta) values(1,'Kerem', 'Ayaz', '12345678901', 'test@kerem.com')
+
+-- bir veri daha girelim
+
+insert into Personel(Id,Ad,Soyad,TC,Eposta) values(1,'Selcuk', 'Dinc','10987654321', 'test@selcuk.com')
+
+-- ekledigimiz verilere bakalim
+
+select Id,Ad,Soyad,TC,Eposta from Personel
+
+-- sadece add ve eposta kolonlarini alalim
+
+select Ad,Eposta from Personel
+
+-- bir veri yiginini sorgulamak icin select keywordu kullanilir,
+
+-- from keywordu verilerin hangi tablodan getirilecegini belirler.
+
+ 
